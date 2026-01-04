@@ -31,7 +31,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-indigo-950 via-fuchsia-900 to-black">
+    <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-purple-900">
       {/* Hero Section */}
       <div id="home" className="container mx-auto px-4 py-32">
         <div className="text-center">
@@ -56,7 +56,7 @@ export default function Home() {
         <h2 className="text-4xl font-bold text-white text-center mb-12">Meet Our Streamers</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {streamers.map((streamer, index) => (
-            <div key={index} className="bg-gradient-to-br from-pink-600 to-orange-500 bg-opacity-90 rounded-lg p-6 hover:scale-105 transition-transform">
+            <div key={index} className="bg-gradient-to-b from-purple-900 via-purple-800 to-black bg-opacity-90 rounded-lg p-6 hover:bg-opacity-100 transition">
               <div className="flex items-start gap-4">
                 <img 
                   src={streamer.image} 
@@ -82,7 +82,7 @@ export default function Home() {
         <h2 className="text-4xl font-bold text-white text-center mb-12">Best Clips</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Clip 1 - Placeholder */}
-          <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg p-6">
+          <div className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6">
             <div className="bg-purple-800 rounded-lg aspect-video mb-4 flex items-center justify-center">
               <p className="text-purple-300">Clip 1 - Coming Soon</p>
             </div>
@@ -91,7 +91,7 @@ export default function Home() {
           </div>
 
           {/* Clip 2 - Placeholder */}
-          <div className="bg-purple-900 bg-opacity-50 rounded-lg p-6">
+          <div className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6">
             <div className="bg-purple-800 rounded-lg aspect-video mb-4 flex items-center justify-center">
               <p className="text-purple-300">Clip 2 - Coming Soon</p>
             </div>
@@ -100,7 +100,7 @@ export default function Home() {
           </div>
 
           {/* Clip 3 - Placeholder */}
-          <div className="bg-purple-900 bg-opacity-50 rounded-lg p-6">
+          <div className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6">
             <div className="bg-purple-800 rounded-lg aspect-video mb-4 flex items-center justify-center">
               <p className="text-purple-300">Clip 3 - Coming Soon</p>
             </div>
