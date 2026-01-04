@@ -35,10 +35,10 @@ export default function Home() {
       {/* Hero Section */}
       <div id="home" className="container mx-auto px-4 py-32">
         <div className="text-center">
-          <h1 className="text-6xl font-bold text-white mb-4">
+          <h1 className="text-6xl font-bold text-vvv-gold mb-4">
             Vintage Virtual Vibes
           </h1>
-          <p className="text-xl text-purple-200 mb-12">
+          <p className="text-xl text-vvv-gold mb-12">
             Four gamers, one community, endless entertainment
           </p>
           <div className="flex justify-center">
@@ -53,7 +53,7 @@ export default function Home() {
 
       {/* Streamers Section */}
       <div id="streamers" className="container mx-auto px-4 py-16">
-        <h2 className="text-4xl font-bold text-white text-center mb-12">Meet Our Streamers</h2>
+        <h2 className="text-4xl font-bold text-vvv-gold text-center mb-12">Meet Our Streamers</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {streamers.map((streamer, index) => (
             <div key={index} className="bg-gradient-to-b from-purple-900 via-purple-800 to-black bg-opacity-90 rounded-lg p-6 hover:bg-opacity-100 transition">
@@ -64,12 +64,12 @@ export default function Home() {
                   className="w-24 h-24 rounded-full object-cover"
                 />
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-white mb-2">{streamer.name}</h3>
-                  <p className="text-purple-300 font-semibold mb-3">{streamer.style}</p>
+                  <h3 className="text-2xl font-bold text-vvv-gold mb-2">{streamer.name}</h3>
+                  <p className="text-orange-300 font-semibold mb-3">{streamer.style}</p>
                 </div>
               </div>
-              <p className="text-purple-100 mb-4 mt-4">{streamer.description}</p>
-              <a href={streamer.streamLink} target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-white transition">
+              <p className="text-gray-200 mb-4 mt-4">{streamer.description}</p>
+              <a href={streamer.streamLink} target="_blank" rel="noopener noreferrer" className="text-vvv-gold hover:text-orange-300 transition">
                 Watch Stream →
               </a>
             </div>
@@ -79,33 +79,33 @@ export default function Home() {
 
       {/* Clips Section */}
       <div id="clips" className="container mx-auto px-4 py-16 mb-16">
-        <h2 className="text-4xl font-bold text-white text-center mb-12">Best Clips</h2>
+        <h2 className="text-4xl font-bold text-vvv-gold text-center mb-12">Best Clips</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Clip 1 - Placeholder */}
           <div className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6">
             <div className="bg-purple-800 rounded-lg aspect-video mb-4 flex items-center justify-center">
-              <p className="text-purple-300">Clip 1 - Coming Soon</p>
+              <p className="text-vvv-gold">Clip 1 - Coming Soon</p>
             </div>
-            <h3 className="text-xl font-bold text-white mb-2">Epic Moment #1</h3>
-            <p className="text-purple-200 text-sm">Add your first clip here</p>
+            <h3 className="text-xl font-bold text-vvv-gold mb-2">Epic Moment #1</h3>
+            <p className="text-gray-300 text-sm">Add your first clip here</p>
           </div>
 
           {/* Clip 2 - Placeholder */}
           <div className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6">
             <div className="bg-purple-800 rounded-lg aspect-video mb-4 flex items-center justify-center">
-              <p className="text-purple-300">Clip 2 - Coming Soon</p>
+              <p className="text-vvv-gold">Clip 2 - Coming Soon</p>
             </div>
-            <h3 className="text-xl font-bold text-white mb-2">Epic Moment #2</h3>
-            <p className="text-purple-200 text-sm">Add your second clip here</p>
+            <h3 className="text-xl font-bold text-vvv-gold mb-2">Epic Moment #2</h3>
+            <p className="text-gray-300 text-sm">Add your second clip here</p>
           </div>
 
           {/* Clip 3 - Placeholder */}
           <div className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6">
             <div className="bg-purple-800 rounded-lg aspect-video mb-4 flex items-center justify-center">
-              <p className="text-purple-300">Clip 3 - Coming Soon</p>
+              <p className="text-vvv-gold">Clip 3 - Coming Soon</p>
             </div>
-            <h3 className="text-xl font-bold text-white mb-2">Epic Moment #3</h3>
-            <p className="text-purple-200 text-sm">Add your third clip here</p>
+            <h3 className="text-xl font-bold text-vvv-gold mb-2">Epic Moment #3</h3>
+            <p className="text-gray-300 text-sm">Add your third clip here</p>
           </div>
         </div>
       </div>
