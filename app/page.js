@@ -22,7 +22,7 @@ export default function Home() {
       image: "/tony.png"
     },
     {
-      name: "Arc123",
+      name: "Arc193",
       style: "MMO Enthusiast",
       description: "Goofy gameplay across all genres, but MMOs are where the magic happens.",
       streamLink: "https://twitch.tv/thearc193",
@@ -31,16 +31,23 @@ export default function Home() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-900 via-purple-800 to-black">
+    <div className="min-h-screen bg-gradient-to-b from-blue-900 via-purple-900 to-black">
       {/* Hero Section */}
       <div id="home" className="container mx-auto px-4 py-32">
         <div className="text-center">
           <h1 className="text-6xl font-bold text-white mb-4">
             Vintage Virtual Vibes
           </h1>
-          <p className="text-xl text-purple-200 mb-8">
+          <p className="text-xl text-purple-200 mb-12">
             Four gamers, one community, endless entertainment
           </p>
+          <div className="flex justify-center">
+            <img 
+              src="/vibelogoblue.png" 
+              alt="Vintage Virtual Vibes Logo"
+              className="w-64 h-64 md:w-80 md:h-80 object-contain"
+            />
+          </div>
         </div>
       </div>
 
