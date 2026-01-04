@@ -38,7 +38,7 @@ export default function Home() {
           <h1 className="text-6xl font-bold text-vvv-gold mb-4">
             Vintage Virtual Vibes
           </h1>
-          <p className="text-xl text-vvv-gold mb-12">
+          <p className="text-xl text-vvv-gold mb-20">
             Four gamers, one community, endless entertainment
           </p>
           <div className="flex justify-center">
@@ -52,7 +52,7 @@ export default function Home() {
       </div>
 
       {/* Streamers Section */}
-      <div id="streamers" className="container mx-auto px-4 py-16">
+      <div id="streamers" className="container mx-auto px-4 py-0">
         <h2 className="text-4xl font-bold text-vvv-gold text-center mb-12">Meet Our Streamers</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {streamers.map((streamer, index) => (
