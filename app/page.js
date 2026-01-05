@@ -50,7 +50,53 @@ export default function Home() {
           </div>
         </div>
       </div>
+ {/* Our Socials Section */}
+      <div className="container mx-auto px-4 py-8">
+        <h2 className="text-4xl font-bold text-amber-400 text-center mb-8">Our Socials</h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          {/* Twitch */}
+          <a 
+            href="https://www.twitch.tv/vintagevirtualvibes" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6 hover:scale-105 transition-transform flex items-center gap-3"
+          >
+            <img src="/twitchlogo.png" alt="Twitch" className="w-16 h-16 object-contain" />
+            <span className="text-white font-semibold text-lg">Twitch</span>
+          </a>
 
+          {/* YouTube */}
+          <a 
+            href="https://www.youtube.com/@Vintage_Virtual_Vibes-f1n" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6 hover:scale-105 transition-transform flex items-center gap-3"
+          >
+            <img src="/youtubelogo.png" alt="YouTube" className="w-16 h-16 object-contain" />
+            <span className="text-white font-semibold text-lg">YouTube</span>
+          </a>
+          {/* Kick */}
+          <a 
+            href="https://kick.com/vintagevirtualvibe" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6 hover:scale-105 transition-transform flex items-center gap-3"
+          >
+            <img src="/kicklogo.jpg" alt="Kick" className="w-16 h-16 object-contain" />
+            <span className="text-white font-semibold text-lg">Kick</span>
+          </a>
+
+
+          {/* Gmail */}
+          <a 
+            href="mailto:VintageVirtualVibes@gmail.com" 
+            className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6 hover:scale-105 transition-transform flex items-center gap-3"
+          >
+            <img src="/gmaillogo.png" alt="Gmail" className="w-16 h-16 object-contain" />
+            <span className="text-white font-semibold text-lg">Email Us</span>
+          </a>
+        </div>
+      </div>
       {/* Streamers Section */}
       <div id="streamers" className="container mx-auto px-4 py-0">
         <h2 className="text-4xl font-bold text-amber-400 text-center mb-12">Meet Our Streamers</h2>
