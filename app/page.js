@@ -155,21 +155,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-     {/* TARDIS Link - Bottom Left */}
-      <div className="fixed bottom-8 left-8 z-20">
-        <a 
-          href="https://rb.gy/zna06i" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="block hover:scale-110 transition-transform"
-        >
-          <img 
-            src="/wyld.png" 
-            alt="TARDIS" 
-            className="w-20 h-20 md:w-24 md:h-24 object-contain"
-          />
-        </a>
-      </div>
     </div>
 
         )
