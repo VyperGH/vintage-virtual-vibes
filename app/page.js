@@ -51,7 +51,7 @@ export default function Home() {
         </div>
       </div>
  {/* Our Socials Section */}
-      <div className="container mx-auto px-4 py-8">
+      <div id="socials" className="container mx-auto px-4 py-8">
         <h2 className="text-4xl font-bold text-amber-400 text-center mb-8">Our Socials</h2>
         <div className="flex flex-wrap justify-center gap-6">
           {/* Twitch */}

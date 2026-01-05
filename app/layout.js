@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
               </a>
               <div className="space-x-6">
                 <a href="#home" className="text-purple-200 hover:text-white transition">Home</a>
+                <a href="#socials" className="text-purple-200 hover:text-white transition">Socials</a>
                 <a href="#streamers" className="text-purple-200 hover:text-white transition">Streamers</a>
                 <a href="#clips" className="text-purple-200 hover:text-white transition">Clips</a>
               </div>
