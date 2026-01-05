@@ -64,7 +64,7 @@ export default function Home() {
                   className="w-24 h-24 rounded-full object-cover"
                 />
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-white-400 mb-2">{streamer.name}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">{streamer.name}</h3>
                   <p className="text-orange-300 font-semibold mb-3">{streamer.style}</p>
                 </div>
               </div>
@@ -109,6 +109,22 @@ export default function Home() {
           </div>
         </div>
       </div>
+     {/* TARDIS Link - Bottom Left */}
+      <div className="fixed bottom-8 left-8 z-20">
+        <a 
+          href="https://rb.gy/zna06i" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="block hover:scale-110 transition-transform"
+        >
+          <img 
+            src="/wyld.png" 
+            alt="TARDIS" 
+            className="w-20 h-20 md:w-24 md:h-24 object-contain"
+          />
+        </a>
+      </div>
     </div>
-  )
+
+        )
 }
