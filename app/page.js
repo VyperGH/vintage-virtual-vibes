@@ -9,22 +9,22 @@ export default function Home() {
     },
     {
       name: "Distrought", 
-      style: "Old School Gamer",
-      description: "Bringing back the classics with retro games and diving into newer horror experiences.",
+      style: "Chaotic Entertainer",
+      description: "A loud, fast-talking wildcard who turns panic into punchlines.",
       streamLink: "https://twitch.tv/distrought",
       image: "/distrought.png"
     },
     {
       name: "Bones",
-      style: "Laid Back Player",
-      description: "Gaming for pure relaxation and downtime - the ultimate chill zone.",
+      style: "The Co-Op mastermind",
+      description: "We survive together… or don’t. Either way, it’s entertaining.",
       streamLink: "https://www.youtube.com/@rntgaming5828",
       image: "/tony.png"
     },
     {
       name: "Arc193",
-      style: "MMO Enthusiast",
-      description: "Goofy gameplay across all genres, but MMOs are where the magic happens.",
+      style: "The Tactical All-Rounder",
+      description: "A versatile player for any genre. I’m here for the win, the team, and non-stop action",
       streamLink: "https://twitch.tv/thearc193",
       image: "/justin.png"
     }
