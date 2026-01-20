@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
           <div className="container mx-auto px-4 py-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="flex items-center gap-4">
-                {/* Discord Button with Widget */}
+                {/* Discord Button - Link on mobile, hover widget on desktop */}
                 <div className="relative group">
                   <a 
                     href="https://discord.gg/yVVACSrKuK" 
@@ -45,7 +45,8 @@ export default function RootLayout({ children }) {
                   >
                     Join Our Discord
                   </a>
-                  <div className="absolute top-full left-0 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                  {/* Discord Widget - Desktop only, shows on hover */}
+                  <div className="hidden md:block absolute top-full left-0 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                     <iframe
                       src="https://discord.com/widget?id=1346901878075555903&theme=dark"
                       width="350"
@@ -56,16 +57,21 @@ export default function RootLayout({ children }) {
                     ></iframe>
                   </div>
                 </div>
-
-                {/* Twitch Live Indicator - Only shows when live */}
+      
+                {/* Twitch Live Button - Opens stream on mobile, hover preview on desktop */}
                 {isLive && (
                   <div className="relative group">
-                    <div className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition font-semibold whitespace-nowrap cursor-pointer flex items-center gap-2">
-                      <span className="animate-pulse">🔴</span>
-                      <span>LIVE</span>
-                    </div>
-                    {/* Twitch Embed Dropdown */}
-                    <div className="absolute top-full left-0 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    <a
+                     href="https://www.twitch.tv/vintagevirtualvibes"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition font-semibold whitespace-nowrap flex items-center gap-2"
+                     >
+                     <span className="animate-pulse">{"🔴"}</span>
+                      <span>Currently Streaming Live!</span>
+                    </a>
+                    {/* Twitch Embed - Desktop only, shows on hover */}
+                    <div className="hidden md:block absolute top-full left-0 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                       <iframe
                         src="https://player.twitch.tv/?channel=vintagevirtualvibes&parent=vintagevirtualvibes.com&parent=www.vintagevirtualvibes.com"
                         width="400"
