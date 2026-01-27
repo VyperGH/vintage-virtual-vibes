@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect, useState } from 'react'
 export default function Home() {
   const streamers = [
     {
@@ -123,57 +126,73 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Clips Section */}
+       {/* Clips Section */}
       <div id="clips" className="container mx-auto px-4 py-16 mb-16">
-        <h2 className="text-4xl font-bold text-amber-400 text-center mb-12">Best Clips</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-           {/* Clip 1 - YouTube Short */}
-          <div className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6">
-            <div className="rounded-lg aspect-[9/16] mb-4 overflow-hidden">
-              <iframe
-                src="https://www.youtube.com/embed/EKnfQmXqinU"
-                title="Epic Moment #1"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
-            </div>
-            <h3 className="text-xl font-bold text-amber-400 mb-2">Epic Moment #1</h3>
-            <p className="text-gray-300 text-sm">Check out this epic clip!</p>
-          </div>
-
-          {/* Clip 2 - YouTube Video */}
-          <div className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6">
-            <div className="rounded-lg aspect-video mb-4 overflow-hidden">
-              <iframe
-                src="https://www.youtube.com/embed/oCefvYYC5g0"
-                title="Epic Moment #2"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
-            </div>
-            <h3 className="text-xl font-bold text-amber-400 mb-2">Epic Moment #2</h3>
-            <p className="text-gray-300 text-sm">Another amazing moment!</p>
-          </div>
-
-          {/* Clip 3 - YouTube Video */}
-          <div className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6">
-            <div className="rounded-lg aspect-video mb-4 overflow-hidden">
-              <iframe
-                src="https://www.youtube.com/embed/UlqfCfc9T0A"
-                title="Epic Moment #3"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
-            </div>
-            <h3 className="text-xl font-bold text-amber-400 mb-2">Epic Moment #3</h3>
-            <p className="text-gray-300 text-sm">Check out this epic clip!</p>
-          </div>
-        </div>
+        <h2 className="text-4xl font-bold text-amber-400 text-center mb-12">Latest Videos</h2>
+        <LatestVideos />
       </div>
     </div>
 
         )
+}
+function LatestVideos() {
+  const [videos, setVideos] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchVideos = async () => {
+      try {
+        const response = await fetch('/api/youtube');
+        const data = await response.json();
+        if (data.videos) {
+          setVideos(data.videos);
+        }
+      } catch (error) {
+        console.error('Error fetching videos:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchVideos();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="text-center text-amber-400">
+        <p>Loading latest videos...</p>
+      </div>
+    );
+  }
+
+  if (videos.length === 0) {
+    return (
+      <div className="text-center text-gray-300">
+        <p>No videos available yet.</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {videos.map((video) => (
+        <div key={video.id} className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6">
+          <a 
+            href={`https://www.youtube.com/watch?v=${video.id}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="rounded-lg overflow-hidden mb-4">
+              <img 
+                src={video.thumbnail} 
+                alt={video.title}
+                className="w-full h-auto hover:scale-105 transition-transform"
+              />
+            </div>
+            <h3 className="text-xl font-bold text-amber-400 mb-2 line-clamp-2">{video.title}</h3>
+          </a>
+        </div>
+      ))}
+    </div>
+  );
 }
