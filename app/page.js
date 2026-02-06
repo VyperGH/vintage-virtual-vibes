@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+
 export default function Home() {
   const streamers = [
     {
@@ -20,14 +21,14 @@ export default function Home() {
     {
       name: "Bones",
       style: "The Co-Op mastermind",
-      description: "We survive together… or don’t. Either way, it’s entertaining.",
+      description: "We survive together… or don't. Either way, it's entertaining.",
       streamLink: "https://www.youtube.com/@rntgaming5828",
       image: "/tony.png"
     },
     {
       name: "Arc193",
       style: "The Tactical All-Rounder",
-      description: "A versatile player for any genre. I’m here for the win, the team, and non-stop action",
+      description: "A versatile player for any genre. I'm here for the win, the team, and non-stop action",
       streamLink: "https://twitch.tv/thearc193",
       image: "/justin.png"
     }
@@ -53,7 +54,8 @@ export default function Home() {
           </div>
         </div>
       </div>
- {/* Our Socials Section */}
+
+      {/* Our Socials Section */}
       <div id="socials" className="container mx-auto px-4 py-8">
         <h2 className="text-4xl font-bold text-amber-400 text-center mb-8">Our Socials</h2>
         <div className="flex flex-wrap justify-center gap-6">
@@ -78,6 +80,7 @@ export default function Home() {
             <img src="/youtubelogo.png" alt="YouTube" className="w-16 h-16 object-contain" />
             <span className="text-white font-semibold text-lg">YouTube</span>
           </a>
+
           {/* Kick */}
           <a 
             href="https://kick.com/vintagevirtualvibe" 
@@ -89,7 +92,6 @@ export default function Home() {
             <span className="text-white font-semibold text-lg">Kick</span>
           </a>
 
-
           {/* Gmail */}
           <a 
             href="mailto:VintageVirtualVibes@gmail.com" 
@@ -100,12 +102,13 @@ export default function Home() {
           </a>
         </div>
       </div>
+
       {/* Streamers Section */}
       <div id="streamers" className="container mx-auto px-4 py-0">
         <h2 className="text-4xl font-bold text-amber-400 text-center mb-12">Meet Our Streamers</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {streamers.map((streamer, index) => (
-            <div key={index} className="bg-gradient-to-b from-purple-900 via-purple-800 to-black bg-opacity-90 rounded-lg p-6 hover:bg-opacity-100 transition">
+            <div key={index} className="bg-gradient-to-b from-purple-900 via-purple-800 to-black bg-opacity-90 rounded-lg p-6 hover:bg-opacity-100 hover:scale-105 transition-transform">
               <div className="flex items-start gap-4">
                 <img 
                   src={streamer.image} 
@@ -126,15 +129,61 @@ export default function Home() {
         </div>
       </div>
 
-       {/* Clips Section */}
-      <div id="clips" className="container mx-auto px-4 py-16 mb-16">
+      {/* Videos Section */}
+      <div id="videos" className="container mx-auto px-4 py-16 mb-16">
         <h2 className="text-4xl font-bold text-amber-400 text-center mb-12">Latest Videos</h2>
         <LatestVideos />
       </div>
-    </div>
 
-        )
+      {/* Our Friends Section */}
+      <div id="friends" className="container mx-auto px-4 py-16 mb-16">
+        <h2 className="text-4xl font-bold text-amber-400 text-center mb-12">Our Friends</h2>
+        <div className="flex justify-center">
+          <div className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-8 max-w-md">
+            <div className="flex justify-center mb-6">
+              <img 
+                src="/commoners-logo.png" 
+                alt="Commoners of DnD Logo"
+                className="w-32 h-32 object-contain"
+              />
+            </div>
+            <h3 className="text-3xl font-bold text-white text-center mb-6">Commoners of DnD</h3>
+            <p className="text-gray-200 text-center mb-6">
+              Check out our friends The Commoners of DnD!
+            </p>
+            <div className="flex justify-center gap-4 flex-wrap">
+              <a 
+                href="https://www.twitch.tv/commonersofdnd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition font-semibold"
+              >
+                Twitch
+              </a>
+              <a 
+                href="https://www.youtube.com/@thecommonersofdnd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg transition font-semibold"
+              >
+                YouTube
+              </a>
+              <a 
+                href="https://commoners.podbean.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg transition font-semibold"
+              >
+                Podcast
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
+
 function LatestVideos() {
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
