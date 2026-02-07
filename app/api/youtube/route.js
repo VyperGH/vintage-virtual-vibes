@@ -1,6 +1,6 @@
 export async function GET() {
-  const apiKey = 'AIzaSyA19UZSEQp2F1Hzffm4y0ow8GEuomnOZAA';
-  const channelId = 'UCh7fXA3QDAr0T9vE8Nr1HvQ';
+  const apiKey = process.env.YOUTUBE_API_KEY;
+  const channelId = process.env.YOUTUBE_CHANNEL_ID;
 
   try {
     const response = await fetch(

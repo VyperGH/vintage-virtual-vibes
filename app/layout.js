@@ -95,7 +95,7 @@ export default function RootLayout({ children }) {
                   {/* Discord Widget - Desktop only, shows on hover */}
                   <div className="hidden md:block absolute top-full left-0 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                     <iframe
-                      src="https://discord.com/widget?id=1346901878075555903&theme=dark"
+                      src={`https://discord.com/widget?id=${process.env.NEXT_PUBLIC_DISCORD_SERVER_ID || "1346901878075555903"}&theme=dark`}
                       width="350"
                       height="500"
                       allowtransparency="true"
@@ -140,7 +140,7 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </nav>
-        <GoogleAnalytics gaId="G-9XB41FQEPE" />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || "G-9XB41FQEPE"} />
         {children}
       </body>
     </html>
