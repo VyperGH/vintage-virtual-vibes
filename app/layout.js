@@ -1,4 +1,5 @@
 'use client'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import './globals.css'
 import { useEffect, useState } from 'react'
@@ -139,6 +140,7 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </nav>
+        <GoogleAnalytics gaId="G-9XB41FQEPE" />
         {children}
       </body>
     </html>
