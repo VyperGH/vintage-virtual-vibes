@@ -47,10 +47,10 @@ export default function Home() {
           </p>
           <div className="flex justify-center">
             <img 
-              src="/newvintagelogo.png" 
-              alt="Vintage Virtual Vibes Logo"
-              className="w-64 h-64 md:w-80 md:h-80 object-contain"
-            />
+            src="/newvintagelogo.png" 
+            alt="Vintage Virtual Vibes retro gaming community logo with vaporwave aesthetic"
+            className="w-64 h-64 md:w-80 md:h-80 object-contain"
+/>
           </div>
         </div>
       </div>
@@ -66,7 +66,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6 hover:scale-105 transition-transform flex items-center gap-3"
           >
-            <img src="/twitchlogo.png" alt="Twitch" className="w-16 h-16 object-contain" />
+            <img src="/twitchlogo.png" alt="Twitch streaming platform logo" className="w-16 h-16 object-contain" />
             <span className="text-white font-semibold text-lg">Twitch</span>
           </a>
 
@@ -77,7 +77,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6 hover:scale-105 transition-transform flex items-center gap-3"
           >
-            <img src="/youtubelogo.png" alt="YouTube" className="w-16 h-16 object-contain" />
+            <img src="/youtubelogo.png" alt="YouTube video platform logo" className="w-16 h-16 object-contain" />
             <span className="text-white font-semibold text-lg">YouTube</span>
           </a>
 
@@ -88,7 +88,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6 hover:scale-105 transition-transform flex items-center gap-3"
           >
-            <img src="/kicklogo.jpg" alt="Kick" className="w-16 h-16 object-contain" />
+            <img src="/kicklogo.jpg" alt="Kick streaming platform logo" className="w-16 h-16 object-contain" />
             <span className="text-white font-semibold text-lg">Kick</span>
           </a>
 
@@ -97,7 +97,7 @@ export default function Home() {
             href="mailto:VintageVirtualVibes@gmail.com" 
             className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6 hover:scale-105 transition-transform flex items-center gap-3"
           >
-            <img src="/gmaillogo.png" alt="Gmail" className="w-16 h-16 object-contain" />
+            <img src="/gmaillogo.png" alt="Gmail email contact icon" className="w-16 h-16 object-contain" />
             <span className="text-white font-semibold text-lg">Email Us</span>
           </a>
         </div>
@@ -142,10 +142,10 @@ export default function Home() {
           <div className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-8 max-w-md">
             <div className="flex justify-center mb-6">
               <img 
-                src="/commoners-logo.png" 
-                alt="Commoners of DnD Logo"
-                className="w-32 h-32 object-contain"
-              />
+              src="/commoners-logo.png" 
+              alt="Commoners of DnD podcast logo - D&D gaming community"
+              className="w-32 h-32 object-contain"
+/>
             </div>
             <h3 className="text-3xl font-bold text-white text-center mb-6">Commoners of DnD</h3>
             <p className="text-gray-200 text-center mb-6">

@@ -27,8 +27,54 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>Vintage Virtual Vibes</title>
-        <meta name="description" content="Gaming community showcase" />
+        <title>Vintage Virtual Vibes - Gaming Community & Twitch Streamers</title>
+        <meta name="description" content="Join Vintage Virtual Vibes - a gaming community featuring 4 talented streamers playing retro games, horror, MMOs, and co-op adventures. Watch live on Twitch, YouTube, and Kick!" />
+        <meta name="keywords" content="gaming community, twitch streamers, retro gaming, horror games, MMO gaming, co-op gaming, vintage virtual vibes, gaming content creators" />
+        <meta name="author" content="Vintage Virtual Vibes" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vintagevirtualvibes.com/" />
+        <meta property="og:title" content="Vintage Virtual Vibes - Gaming Community & Twitch Streamers" />
+        <meta property="og:description" content="Join our gaming community featuring 4 talented streamers. Watch live streams, catch our latest videos, and join the fun!" />
+        <meta property="og:image" content="https://vintagevirtualvibes.com/vibelogoblue.png" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://vintagevirtualvibes.com/" />
+        <meta property="twitter:title" content="Vintage Virtual Vibes - Gaming Community & Twitch Streamers" />
+        <meta property="twitter:description" content="Join our gaming community featuring 4 talented streamers. Watch live streams, catch our latest videos, and join the fun!" />
+        <meta property="twitter:image" content="https://vintagevirtualvibes.com/vibelogoblue.png" />
+        
+        {/* Favicon */}
+        <link rel="icon" href="/vibelogoblue.png" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://vintagevirtualvibes.com/" />
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Vintage Virtual Vibes",
+              "url": "https://vintagevirtualvibes.com",
+              "logo": "https://vintagevirtualvibes.com/vibelogoblue.png",
+              "description": "Gaming community featuring talented streamers playing retro games, horror, MMOs, and co-op adventures",
+              "sameAs": [
+                "https://www.twitch.tv/vintagevirtualvibes",
+                "https://www.youtube.com/@Vintage_Virtual_Vibes-f1n",
+                "https://kick.com/vintagevirtualvibe"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "VintageVirtualVibes@gmail.com",
+                "contactType": "Customer Service"
+              }
+            })
+          }}
+        />
       </head>
       <body>
         <nav className="bg-black bg-opacity-50 backdrop-blur-sm fixed w-full z-10">
