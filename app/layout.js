@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
       try {
         const response = await fetch('/api/twitch');
         const data = await response.json();
-        setIsLive(data.isLive);
+        setIsLive(data.mainChannel?.isLive || false);
       } catch (error) {
         console.error('Error checking live status:', error);
       }

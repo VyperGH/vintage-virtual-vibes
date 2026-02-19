@@ -9,30 +9,61 @@ export default function Home() {
       style: "Chill & Goofy Gamer",
       description: "Relaxed gaming vibes with a goofy twist - unless it's a horror game, then all bets are off!",
       streamLink: "https://twitch.tv/ecsvyper",
-      image: "/vyper.jpg"
+      image: "/vyper.jpg",
+      twitchChannel: "ecsvyper"
     },
     {
       name: "Distrought", 
       style: "Chaotic Entertainer",
       description: "A loud, fast-talking wildcard who turns panic into punchlines.",
       streamLink: "https://twitch.tv/distrought",
-      image: "/distrought.png"
+      image: "/distrought.png",
+      twitchChannel: "distrought"
     },
     {
       name: "Bones",
       style: "The Co-Op mastermind",
       description: "We survive together… or don't. Either way, it's entertaining.",
       streamLink: "https://www.youtube.com/@rntgaming5828",
-      image: "/tony.png"
+      image: "/tony.png",
+      twitchChannel: null
     },
     {
       name: "Arc193",
       style: "The Tactical All-Rounder",
       description: "A versatile player for any genre. I'm here for the win, the team, and non-stop action",
       streamLink: "https://twitch.tv/thearc193",
-      image: "/justin.png"
+      image: "/justin.png",
+      twitchChannel: "thearc193"
     }
   ]
+  
+  const [streamerLiveStatus, setStreamerLiveStatus] = useState({});
+
+  useEffect(() => {
+    const checkStreamerStatus = async () => {
+      try {
+        const response = await fetch('/api/twitch');
+        const data = await response.json();
+        
+        // Create a map of streamer names to live status
+        const statusMap = {};
+        if (data.streamers) {
+          data.streamers.forEach(streamer => {
+            statusMap[streamer.name] = streamer.isLive;
+          });
+        }
+        setStreamerLiveStatus(statusMap);
+      } catch (error) {
+        console.error('Error checking streamer status:', error);
+      }
+    };
+
+    checkStreamerStatus();
+    const interval = setInterval(checkStreamerStatus, 60000); // Check every minute
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-purple-900">
@@ -47,10 +78,10 @@ export default function Home() {
           </p>
           <div className="flex justify-center">
             <img 
-            src="/newvintagelogo.png" 
-            alt="Vintage Virtual Vibes retro gaming community logo with vaporwave aesthetic"
-            className="w-64 h-64 md:w-80 md:h-80 object-contain"
-/>
+              src="/newvintagelogo.png" 
+              alt="Vintage Virtual Vibes retro gaming community logo with vaporwave aesthetic"
+              className="w-64 h-64 md:w-80 md:h-80 object-contain"
+            />
           </div>
         </div>
       </div>
@@ -108,7 +139,22 @@ export default function Home() {
         <h2 className="text-4xl font-bold text-amber-400 text-center mb-12">Meet Our Streamers</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {streamers.map((streamer, index) => (
-            <div key={index} className="bg-gradient-to-b from-purple-900 via-purple-800 to-black bg-opacity-90 rounded-lg p-6 hover:bg-opacity-100 hover:scale-105 transition-transform">
+            <div key={index} className="relative bg-gradient-to-b from-purple-900 via-purple-800 to-black bg-opacity-90 rounded-lg p-6 hover:bg-opacity-100 hover:scale-105 transition-transform">
+              {/* Live Indicator - Top Right Corner */}
+              {streamer.twitchChannel && streamerLiveStatus[streamer.name] && (
+                <div className="absolute top-4 right-4 z-10">
+                  
+                    <a href={streamer.streamLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1 animate-pulse"
+                  >
+                    <span>🔴</span>
+                    <span>LIVE</span>
+                  </a>
+                </div>
+              )}
+              
               <div className="flex items-start gap-4">
                 <img 
                   src={streamer.image} 
@@ -142,10 +188,10 @@ export default function Home() {
           <div className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-8 max-w-md">
             <div className="flex justify-center mb-6">
               <img 
-              src="/commoners-logo.png" 
-              alt="Commoners of DnD podcast logo - D&D gaming community"
-              className="w-32 h-32 object-contain"
-/>
+                src="/commoners-logo.png" 
+                alt="Commoners of DnD podcast logo - D&D gaming community"
+                className="w-32 h-32 object-contain"
+              />
             </div>
             <h3 className="text-3xl font-bold text-white text-center mb-6">Commoners of DnD</h3>
             <p className="text-gray-200 text-center mb-6">
