@@ -85,7 +85,7 @@ export default function RootLayout({ children }) {
                 {/* Discord Button - Link on mobile, hover widget on desktop */}
                 <div className="relative group">
                   <a 
-                    href="https://discord.gg/yVVACSrKuK" 
+                    href="https://discord.gg/Gnjca4fqFr" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition font-semibold whitespace-nowrap"
