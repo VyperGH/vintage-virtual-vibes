@@ -114,7 +114,7 @@ export default function Home() {
 
           {/* TikTok */}
           <a 
-            href="https://www.tiktok.com/@vintagevirtualvib" 
+            href="https://www.tiktok.com/@vintagevirtualvibes.com" 
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6 hover:scale-105 transition-transform flex items-center gap-3"
