@@ -35,6 +35,14 @@ export default function Home() {
       streamLink: "https://twitch.tv/thearc193",
       image: "/justin.png",
       twitchChannel: "thearc193"
+    },
+    {
+      name: "Wyld",
+      style: "The Man Behind The Screens",
+      description: "Our main moderator who has overwatch on all the action. He's not always visible but I guarantee you he's there!",
+      streamLink: null,
+      image: "/wyld.png",
+      twitchChannel: null
     }
   ]
   
@@ -134,11 +142,13 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Streamers Section */}
+      {/* Team Section */}
       <div id="streamers" className="container mx-auto px-4 py-0">
-        <h2 className="text-4xl font-bold text-amber-400 text-center mb-12">Meet Our Streamers</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {streamers.map((streamer, index) => (
+        <h2 className="text-4xl font-bold text-amber-400 text-center mb-12">Meet Our Team</h2>
+        
+        {/* First 4 team members in grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          {streamers.slice(0, 4).map((streamer, index) => (
             <div key={index} className="relative bg-gradient-to-b from-purple-900 via-purple-800 to-black bg-opacity-90 rounded-lg p-6 hover:bg-opacity-100 hover:scale-105 transition-transform">
               {/* Live Indicator - Top Right Corner */}
               {streamer.twitchChannel && streamerLiveStatus[streamer.name] && (
@@ -167,11 +177,31 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-200 mb-4 mt-4">{streamer.description}</p>
-              <a href={streamer.streamLink} target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-orange-300 transition">
-                Watch Stream →
-              </a>
+              {streamer.streamLink && (
+                <a href={streamer.streamLink} target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-orange-300 transition">
+                  Watch Stream →
+                </a>
+              )}
             </div>
           ))}
+        </div>
+
+        {/* Wyld's card - centered */}
+        <div className="flex justify-center">
+          <div className="relative bg-gradient-to-b from-purple-900 via-purple-800 to-black bg-opacity-90 rounded-lg p-6 hover:bg-opacity-100 hover:scale-105 transition-transform w-full md:w-1/2">
+            <div className="flex items-start gap-4">
+              <img 
+                src={streamers[4].image} 
+                alt={streamers[4].name}
+                className="w-24 h-24 rounded-full object-cover"
+              />
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-white mb-2">{streamers[4].name}</h3>
+                <p className="text-orange-300 font-semibold mb-3">{streamers[4].style}</p>
+              </div>
+            </div>
+            <p className="text-gray-200 mb-4 mt-4">{streamers[4].description}</p>
+          </div>
         </div>
       </div>
 
@@ -226,7 +256,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-        {/* Footer */}
+
+      {/* Footer */}
       <footer className="bg-black bg-opacity-50 text-center py-8 mt-16">
         <p className="text-gray-300 text-sm mb-2">
           © {new Date().getFullYear()} Vintage Virtual Vibes LLC. All rights reserved.

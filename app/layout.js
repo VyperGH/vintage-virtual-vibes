@@ -133,7 +133,7 @@ export default function RootLayout({ children }) {
               <div className="flex flex-wrap justify-center gap-4 md:space-x-6 md:gap-0">
                 <a href="#home" className="text-purple-200 hover:text-white transition">Home</a>
                 <a href="#socials" className="text-purple-200 hover:text-white transition">Socials</a>
-                <a href="#streamers" className="text-purple-200 hover:text-white transition">Streamers</a>
+                <a href="#streamers" className="text-purple-200 hover:text-white transition">Team</a>
                 <a href="#videos" className="text-purple-200 hover:text-white transition">Videos</a>
                 <a href="#friends" className="text-purple-200 hover:text-white transition">Our Friends</a>
               </div>
