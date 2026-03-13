@@ -226,6 +226,21 @@ export default function Home() {
           </div>
         </div>
       </div>
+        {/* Footer */}
+      <footer className="bg-black bg-opacity-50 text-center py-8 mt-16">
+        <p className="text-gray-300 text-sm mb-2">
+          © {new Date().getFullYear()} Vintage Virtual Vibes LLC. All rights reserved.
+        </p>
+        <p className="text-gray-400 text-sm">
+          Contact us:{' '}
+          <a 
+            href="mailto:VintageVirtualVibes@gmail.com" 
+            className="text-amber-400 hover:text-amber-300 transition"
+          >
+            VintageVirtualVibes@gmail.com
+          </a>
+        </p>
+      </footer>
     </div>
   )
 }
