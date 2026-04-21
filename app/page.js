@@ -82,7 +82,7 @@ export default function Home() {
             Vintage Virtual Vibes
           </h1>
           <p className="text-xl text-amber-400 mb-20">
-            Four gamers, one community, endless entertainment
+            Five gamers, one community, endless entertainment
           </p>
           <div className="flex justify-center">
             <img 
