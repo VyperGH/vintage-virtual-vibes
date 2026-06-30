@@ -120,15 +120,15 @@ export default function Home() {
             <span className="text-white font-semibold text-lg">YouTube</span>
           </a>
 
-          {/* TikTok */}
+          {/* X */}
           <a 
-            href="https://www.tiktok.com/@vintagevirtualvibes.com" 
+            href="https://www.x.com/V3Community" 
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-gradient-to-b from-purple-900 via-purple-800 to-black rounded-lg p-6 hover:scale-105 transition-transform flex items-center gap-3"
           >
-            <img src="/tiktoklogo.png" alt="TikTok social media platform logo" className="w-16 h-16 object-contain" />
-            <span className="text-white font-semibold text-lg">TikTok</span>
+            <img src="/x-logo.png" alt="X social media platform logo" className="w-16 h-16 object-contain" />
+            <span className="text-white font-semibold text-lg">X</span>
           </a>
 
           {/* Gmail */}
