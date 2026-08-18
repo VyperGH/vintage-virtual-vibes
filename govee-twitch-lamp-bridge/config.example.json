@@ -1,0 +1,32 @@
+{
+  "_comment": "Copy this file to config.json and fill in your real values. Never share config.json once it has your API key in it.",
+
+  "goveeApiKey": "PASTE_YOUR_GOVEE_API_KEY_HERE",
+
+  "device": {
+    "_comment": "Fill these in from `npm run list-devices`",
+    "sku": "PASTE_SKU_HERE",
+    "id": "PASTE_DEVICE_ID_HERE"
+  },
+
+  "port": 4750,
+  "minDelayBetweenCommandsMs": 350,
+
+  "idleScene": {
+    "_comment": "Optional. If set, the lamp returns to this scene after an alert's revertAfterMs elapses. Leave paramId/id as 0 to disable reverting entirely.",
+    "name": "Idle",
+    "paramId": 0,
+    "id": 0
+  },
+
+  "scenes": {
+    "_comment": "Fill these in from `npm run list-scenes`. Each key below is a Twitch event. Set revertAfterMs to 0 to leave the scene running instead of reverting.",
+
+    "follow": { "name": "REPLACE_WITH_SCENE_NAME", "paramId": 0, "id": 0, "revertAfterMs": 8000 },
+    "subscribe": { "name": "REPLACE_WITH_SCENE_NAME", "paramId": 0, "id": 0, "revertAfterMs": 15000 },
+    "resub": { "name": "REPLACE_WITH_SCENE_NAME", "paramId": 0, "id": 0, "revertAfterMs": 15000 },
+    "giftsub": { "name": "REPLACE_WITH_SCENE_NAME", "paramId": 0, "id": 0, "revertAfterMs": 15000 },
+    "cheer": { "name": "REPLACE_WITH_SCENE_NAME", "paramId": 0, "id": 0, "revertAfterMs": 10000 },
+    "raid": { "name": "REPLACE_WITH_SCENE_NAME", "paramId": 0, "id": 0, "revertAfterMs": 20000 }
+  }
+}
